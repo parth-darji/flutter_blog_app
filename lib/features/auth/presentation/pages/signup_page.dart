@@ -12,7 +12,18 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final nameController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    nameController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,23 +43,27 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
               const SizedBox(height: 30),
-              const AuthField(
+              AuthField(
+                controller: nameController,
                 hintText: "Name",
               ),
               const SizedBox(height: 15),
-              const AuthField(
+              AuthField(
+                controller: emailController,
                 hintText: "Email",
               ),
               const SizedBox(height: 15),
-              const AuthField(
+              AuthField(
+                controller: passwordController,
                 hintText: "Password",
+                obscureText: true,
               ),
               const SizedBox(height: 20),
               const AuthGradientButton(),
               const SizedBox(height: 20),
               RichText(
                 text: TextSpan(
-                  text: "Don't have an account? ",
+                  text: "Already have an account? ",
                   style: Theme.of(context).textTheme.titleMedium,
                   children: [
                     TextSpan(

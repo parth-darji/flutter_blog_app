@@ -1,4 +1,5 @@
 import 'package:flutter_blog_app/features/auth/data/datasources/auth_remote_data_sources.dart';
+import 'package:flutter_blog_app/features/auth/domain/usecases/current_user.dart';
 import 'package:flutter_blog_app/features/auth/domain/usecases/user_login.dart';
 import 'package:flutter_blog_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -38,11 +39,15 @@ void _initAuth() {
     ..registerFactory(
       () => UserLogin(serviceLocator()),
     )
+    ..registerFactory(
+      () => CurrentUser(serviceLocator()),
+    )
     // bloc
     ..registerLazySingleton(
       () => AuthBloc(
         userSignUp: serviceLocator(),
         userLogin: serviceLocator(),
+        currentUser: serviceLocator(),
       ),
     );
 }

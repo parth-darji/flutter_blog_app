@@ -14,6 +14,21 @@ class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl(this.remoteDataSources);
 
   @override
+  Future<Either<Failure, User>> currentUser() async {
+    try {
+      final user = await remoteDataSources.getCurrentUserData();
+
+      if (user == null) {
+        return left(Failure(message: "User not logged in!"));
+      }
+
+      return right(user);
+    } on ServerException catch (e) {
+      return left(Failure(message: e.message));
+    }
+  }
+
+  @override
   Future<Either<Failure, User>> loginWithEmailPassword({
     required String email,
     required String password,

@@ -3,7 +3,7 @@ import 'package:flutter_blog_app/core/usecase/usecase.dart';
 import 'package:flutter_blog_app/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../entities/user.dart';
+import '../../../../core/common/entities/user.dart';
 
 class UserLogin implements UseCase<User, UserLoginParams> {
   final AuthRepository authRepository;

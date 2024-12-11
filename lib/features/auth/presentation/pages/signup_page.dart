@@ -4,7 +4,6 @@ import 'package:flutter_blog_app/core/theme/app_pallete.dart';
 import 'package:flutter_blog_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog_app/features/auth/presentation/pages/login_page.dart';
 import 'package:flutter_blog_app/features/auth/presentation/widgets/auth_field.dart';
-import 'package:flutter_blog_app/main.dart';
 
 import '../widgets/auth_gradient_button.dart';
 

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_blog_app/core/error/exceptions.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

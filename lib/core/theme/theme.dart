@@ -18,7 +18,7 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       backgroundColor: AppPallete.backgroundColor,
     ),
-    chipTheme: ChipThemeData(
+    chipTheme: const ChipThemeData(
       color: WidgetStatePropertyAll(
         AppPallete.backgroundColor,
       ),
@@ -30,6 +30,10 @@ class AppTheme {
       focusedBorder: _border(
         color: AppPallete.gradient2,
       ),
+      errorBorder: _border(
+        color: AppPallete.errorColor,
+      ),
+      border: _border(),
     ),
   );
 }

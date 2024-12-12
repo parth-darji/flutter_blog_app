@@ -38,6 +38,8 @@ dependencies:
   supabase_flutter: ^2.8.1
   flutter_bloc: ^8.1.6
   get_it: ^8.0.2
+  dotted_border: ^2.1.0
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:

@@ -2,7 +2,7 @@ import 'package:flutter_blog_app/core/error/exceptions.dart';
 import 'package:flutter_blog_app/features/auth/data/models/user_model.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-abstract interface class AuthRemoteDataSources {
+abstract interface class AuthRemoteDataSource {
   Session? get currentUserSession;
   Future<UserModel> signUpWithEmailPassword({
     required String name,
@@ -17,10 +17,10 @@ abstract interface class AuthRemoteDataSources {
   Future<UserModel?> getCurrentUserData();
 }
 
-class AuthRemoteDataSourcesImpl implements AuthRemoteDataSources {
+class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   final SupabaseClient supabaseClient;
 
-  AuthRemoteDataSourcesImpl(this.supabaseClient);
+  AuthRemoteDataSourceImpl(this.supabaseClient);
 
   @override
   Session? get currentUserSession => supabaseClient.auth.currentSession;

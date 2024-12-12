@@ -9,7 +9,7 @@ import 'package:supabase_flutter/supabase_flutter.dart' as sb;
 import '../../domain/repository/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
-  final AuthRemoteDataSources remoteDataSources;
+  final AuthRemoteDataSource remoteDataSources;
 
   AuthRepositoryImpl(this.remoteDataSources);
 

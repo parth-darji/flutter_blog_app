@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter_blog_app/features/blog/domain/entities/blog.dart';
 
 class BlogModel extends Blog {

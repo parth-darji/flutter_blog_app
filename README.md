@@ -8,8 +8,6 @@ Check out the demo of the app in action:
 
 This project demonstrates a **Blog App** built using **Flutter Clean Architecture**, showcasing my proficiency in developing scalable, maintainable, and testable applications. Designed with best practices, this app is an excellent example of how **Bloc**, **Supabase**, **Hive**, and **GetIt** can work together seamlessly to deliver robust solutions suitable for enterprise-level applications.
 
----
-
 ## 🌟 Features
 
 - **User Authentication**
@@ -30,8 +28,6 @@ This project demonstrates a **Blog App** built using **Flutter Clean Architectur
 - **Dependency Injection**
   - Powered by **GetIt** for managing dependencies effectively.
 
----
-
 ## 🏗️ Architecture Highlights
 
 This app is built using **Flutter Clean Architecture**, adhering to SOLID principles and scalable design patterns:
@@ -39,8 +35,6 @@ This app is built using **Flutter Clean Architecture**, adhering to SOLID princi
 - **Separation of Concerns**: Clear separation between UI, business logic, and data layers.
 - **Reusability**: Modularized code structure for easy reuse and scalability.
 - **Testability**: Independent modules for effortless unit and integration testing.
-
----
 
 ## 🛠️ Tech Stack
 

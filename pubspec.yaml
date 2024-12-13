@@ -43,6 +43,9 @@ dependencies:
   uuid: ^4.5.1
   intl: ^0.20.1
   internet_connection_checker_plus: ^2.5.2
+  hive: ^4.0.0-dev.2
+  isar_flutter_libs: ^4.0.0-dev.13
+  path_provider: ^2.1.0
 
 dev_dependencies:
   flutter_test:

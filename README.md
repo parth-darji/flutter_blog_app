@@ -1,16 +1,51 @@
-# flutter_blog_app
+# Blog App - Flutter Clean Architecture Showcase 🚀
 
-A new Flutter project.
+## 🎥 App
 
-## Getting Started
+Check out the demo of the app in action:
 
-This project is a starting point for a Flutter application.
+![App Demo](demo.gif)
 
-A few resources to get you started if this is your first Flutter project:
+This project demonstrates a **Blog App** built using **Flutter Clean Architecture**, showcasing my proficiency in developing scalable, maintainable, and testable applications. Designed with best practices, this app is an excellent example of how **Bloc**, **Supabase**, **Hive**, and **GetIt** can work together seamlessly to deliver robust solutions suitable for enterprise-level applications.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🌟 Features
+
+- **User Authentication**
+  - Login and Signup functionality to manage user sessions.
+- **Blog Management**
+
+  - View blogs with a clean and intuitive interface.
+  - Add new blogs with user-friendly forms.
+
+- **State Management**
+
+  - Fully implemented with **Bloc** for predictable state handling.
+
+- **Data Persistence**
+
+  - Uses **Supabase** for backend and **Hive** for local storage.
+
+- **Dependency Injection**
+  - Powered by **GetIt** for managing dependencies effectively.
+
+---
+
+## 🏗️ Architecture Highlights
+
+This app is built using **Flutter Clean Architecture**, adhering to SOLID principles and scalable design patterns:
+
+- **Separation of Concerns**: Clear separation between UI, business logic, and data layers.
+- **Reusability**: Modularized code structure for easy reuse and scalability.
+- **Testability**: Independent modules for effortless unit and integration testing.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Flutter
+- **State Management**: Bloc
+- **Backend**: Supabase
+- **Local Storage**: Hive
+- **Dependency Injection**: GetIt

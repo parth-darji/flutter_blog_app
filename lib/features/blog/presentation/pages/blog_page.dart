@@ -62,7 +62,6 @@ class _BlogPageState extends State<BlogPage> {
               itemCount: state.blogs.length,
               itemBuilder: (context, index) {
                 final blog = state.blogs[index];
-                return Text(blog.title);
                 return BlogCard(
                   blog,
                   color: AppPallete.gradient1,

@@ -22,8 +22,34 @@ class BlogCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(blog.title),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: blog.topics
+                  .map(
+                    (e) => Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Chip(
+                        label: Text(e),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+          Text(
+            blog.title,
+            style: const TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Spacer(),
+          const Text(
+            "1 Min",
+          ),
         ],
       ),
     );

@@ -4,6 +4,7 @@ import 'package:flutter_blog_app/core/theme/app_pallete.dart';
 import 'package:flutter_blog_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog_app/features/auth/presentation/pages/signup_page.dart';
 import 'package:flutter_blog_app/features/auth/presentation/widgets/auth_field.dart';
+import 'package:flutter_blog_app/features/blog/presentation/pages/blog_page.dart';
 
 import '../../../../core/common/widgets/loader.dart';
 import '../../../../core/utils/show_snackbar.dart';
@@ -43,12 +44,19 @@ class _LoginPageState extends State<LoginPage> {
                 context,
                 content: state.message,
               );
+            } else if (state is AuthSuccess) {
+              Navigator.pushAndRemoveUntil(
+                context,
+                BlogPage.route(),
+                (route) => false,
+              );
             }
           },
           builder: (context, state) {
             if (state is AuthLoading) {
               return const Loader();
             }
+
             return Form(
               key: _formKey,
               child: Column(

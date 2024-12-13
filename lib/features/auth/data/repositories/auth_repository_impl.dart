@@ -1,3 +1,4 @@
+import 'package:flutter_blog_app/core/constants/constants.dart';
 import 'package:flutter_blog_app/core/error/exceptions.dart';
 import 'package:flutter_blog_app/core/error/failures.dart';
 import 'package:flutter_blog_app/core/network/connection_checker.dart';
@@ -79,7 +80,9 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       if (!await connectionChecker.isConnected) {
         return left(
-          Failure(message: "No internet connection!"),
+          Failure(
+            message: Constants.noConnectionErrorMessage,
+          ),
         );
       }
 

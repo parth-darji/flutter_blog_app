@@ -12,6 +12,7 @@ import 'package:flutter_blog_app/core/utils/show_snackbar.dart';
 import 'package:flutter_blog_app/features/blog/presentation/bloc/blog_bloc.dart';
 import 'package:flutter_blog_app/features/blog/presentation/widgets/blog_editor.dart';
 
+import '../../../../core/constants/constants.dart';
 import 'blog_page.dart';
 
 class AddNewBlogPage extends StatefulWidget {
@@ -153,12 +154,7 @@ class _AddNewBlogPageState extends State<AddNewBlogPage> {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: [
-                          "Business",
-                          "Technology",
-                          "Programming",
-                          "Entertainment",
-                        ]
+                        children: Constants.topics
                             .map(
                               (e) => Padding(
                                 padding: const EdgeInsets.all(5.0),

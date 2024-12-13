@@ -12,6 +12,7 @@ import 'package:flutter_blog_app/features/blog/domain/entities/blog.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:uuid/uuid.dart';
 
+import '../../../../core/constants/constants.dart';
 import '../../domain/repositories/blog_repository.dart';
 
 class BlogRepositoryImpl implements BlogRepository {
@@ -35,7 +36,9 @@ class BlogRepositoryImpl implements BlogRepository {
   }) async {
     try {
       if (!await connectionChecker.isConnected) {
-        return left(Failure(message: "No internet connection!"));
+        return left(Failure(
+          message: Constants.noConnectionErrorMessage,
+        ));
       }
 
       BlogModel blogModel = BlogModel(
